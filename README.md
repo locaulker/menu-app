@@ -36,7 +36,7 @@ Create a Categories component and pass the categories state value down to this c
 
 #### Filter Functionality
 
-Set up filter functionality where once the user clicks on the button, only the menu items that belong to the selected category are displayed. To do this, define a function that takes a category as a parameter and updates the state to show only the menu items that belong to that category. You can then pass this function down to the Categories component as a prop, and attach it to the buttons.
+Set up filter functionality where once the user clicks on a button, only the menu items that belong to the selected category are displayed. To do this, define a function that takes a category as a parameter and updates the state to show only the menu items that belong to that category. You can then pass this function down to the Categories component as a prop, and attach it to the buttons.
 
 When the user clicks on a category button, the filter function should be called with the selected category as a parameter. The function should then update the state to show only the menu items that belong to the selected category.
 
@@ -64,33 +64,33 @@ Here's a simple example of using a Set:
 
 ```js
 // Create a new set
-let mySet = new Set();
+let mySet = new Set()
 
 // Add values to the set
-mySet.add(1);
-mySet.add(2);
-mySet.add(3);
+mySet.add(1)
+mySet.add(2)
+mySet.add(3)
 
 // Add a duplicate value (ignored)
-mySet.add(1);
+mySet.add(1)
 
 // Get the size of the set (3)
-console.log(mySet.size);
+console.log(mySet.size)
 
 // Check if a value is in the set (true)
-console.log(mySet.has(2));
+console.log(mySet.has(2))
 
 // Remove a value from the set
-mySet.delete(2);
+mySet.delete(2)
 
 // Get an array of all values in the set
-let myArray = Array.from(mySet);
-console.log(myArray); // [1, 3]
+let myArray = Array.from(mySet)
+console.log(myArray) // [1, 3]
 ```
 
 ```js
-const tempCategories = menu.map((item) => item.category);
-const tempSet = new Set(tempCategories);
-const tempItems = ['all', ...tempSet];
-console.log(tempItems);
+const tempCategories = menu.map(item => item.category)
+const tempSet = new Set(tempCategories)
+const tempItems = ["all", ...tempSet]
+console.log(tempItems)
 ```
